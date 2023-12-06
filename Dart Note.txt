@@ -1,0 +1,258 @@
+			>Dart<
+
+pengingat : 
+
+ - setiap penggunaan $ jangan lupa untuk menggunakan {} dan ''
+contoh : 
+
+String salam = 'Halo';
+String nama = 'Suha';
+
+print('$salam $nama');
+
+=========================================
+
+code awal :
+
+void main () {
+	print("kamu jelek banget")
+}
+
+==========================================
+
+> Variabel
+ 
+- var
+- final
+- const
+- last
+
+==========================================
+
+> Number (number.dart)
+
+ - int
+ - double
+
+==========================================
+
+> String (string.dart)
+
+ - penggunaan kutip satu ' ' dan kutip dua " "
+ - menggabungkan stering dengan +
+ - menggabungkan stering dengan $ (interpolation)
+ - ektensi digunakan untuk interpolasi
+ - multi line string dengan petik tiga ''' '''
+
+pengingat :
+
+contoh ekstensi : gabungan2 = '$salam ${nama.toUpperCase}';
+untuk interpolation gunakan petik di awal contoh : string nama = "$selamat pagi $dunia"
+
+===========================================
+
+> Boolean (boolean.dart)
+
+ - true
+ - false
+
+===========================================
+
+> Tipe Data List (list.dart)
+
+ - List
+
+List<String/Int> nama = [bisa nomor atau kata];
+
+contoh : List<int> nomor = [1, 2, 3, 4, 5, 6];
+
+.................................
+
+ - Menambah data ke dalam list
+
+contoh : 
+
+List<int> angka = [];
+angka.add(1);
+angka.add(2);
+angka.add(3);
+
+print(angka);
+
+code di atas akan menambahkan angka 1 sampai 3 ke dalam "angka"
+
+..................................
+
+ - Mengambil/Memanggil salah satu data di dalam list
+
+contoh :
+
+print(angka[0]);
+
+code di atas akan memanggil data pertama di dalam list "angka"
+
+..................................
+
+ - Mengubah data di dalam list
+ 
+contoh :
+
+List<String> buah = ['apel', 'jeruk', 'nanas', 'semangka'];
+buah[3] = 'nangka';
+print(buah);
+
+code di atas akan merubah data no.4 yakni 'semangka' menjadi 'nangka'
+
+..................................
+
+ - Menghapus data di dalam list
+
+  List<String> buah = ['apel', 'jeruk', 'nanas', 'semangka'];
+
+  buah.removeAt(3);
+  print(buah);
+
+ code di atas akan menghapus data nomor 4 di dalam list yakni 'semangka'
+
+pengingat :
+
+ - menggunakan [] untuk tipe data list
+ - untuk string selalu gunakan petik ' ' untuk memulai kata
+ - untuk mengambil data di dalam list di awali dari angka 0 jika ingin mengambil data pertama, 1 untuk data ke dua, dan seterusnya
+
+===========================================
+
+> Tipe data Map (map.dart)
+
+Map<int, String> karyawan = {
+    1: 'Budi',
+    2: 'Joko',
+    3: 'Dinda',
+    4: 'Hanah',
+    5: 'Huda',
+    6: 'Farah',
+  };
+
+  print(karyawan);
+
+  print('nama karyawan : ${karyawan[4]}');
+
+============================================
+
+> Tipe Data Dynamic (dynamic.dart)
+
+tipe data ini dapat merubah atau berisi sebuah data string, int, atau Boolean
+
+contoh : 
+
+dynamic data = 'Halo Kamu';
+  print(data);
+
+  data = 25;
+  print(data);
+
+  data = false;
+  print(data);
+
+============================================
+
+> Function (function.dart)
+
+
+ ~ Function adalah block kode program yang akan di eksekusi ketika di panggil
+ ~ Selain itu function juga digunakan sebagai block kode yang dapat di gunakan kembali
+ ~ Sebelumnya kita sudah menggunakan fungsi print() untuk menampilkan tulisan di consol
+ ~ Untuk mendeklarasikan fungsi caranya sama dengan penulis fungsi main() yang di awal membuat sintaks
+
+...................................
+
+ - Contoh dasar Function
+
+void main() {
+  salam();
+}
+
+void salam() {
+  print("Halo Dunia!");
+}
+
+...................................
+
+ - Function dengan parameter
+
+ ~ di contoh di bawah parameter harus di isi di dalam kurung salam()
+ ~ Sebuah Function bisa menerima nol, satu, atau beberapa parameter, di dalam kasus di bawa ada 2 parameter yakni (String namawala, namaakhir)
+
+void main() {
+  salam("Budi", "Joko");
+}
+
+void salam(String namawala, namaakhir) {
+  print("Halo $namawala dan $namaakhir");
+}
+
+...................................
+
+ - Function dengan Optional Parameter
+
+ ~ Secara default, parameter wajib dikirim ketika kita memeanggil function
+ ~ Dart mendukung optional paramer, dimana kita tidak wajib untuk mengisi parameter ketika function di panggil
+ ~ Parameter optional haruslah nullable atau dapat berisi kosong yakni menggunakan kurung siku []
+ ~ penggunaan-nya contoh di bawah : [String? namaakhir]
+ ~ Ketika parameter kosong maka akan keluar null di debug console
+ ~ Untuk merubah default [String? namaakhir] ubah menjadi [String? namaakhir = "someone"]
+ ~ someone bisa di ubah menjadi yang kamu mau
+
+code :
+
+void main() {
+  salam("Budi", "Joko");
+  salam("Agus");
+}
+
+void salam(String namawala, [String? namaakhir]) {
+  print("Halo $namawala dan $namaakhir");
+}
+
+
+...................................
+
+ - Named Parameter
+
+ ~ 
+ ~ secara default, ketika kita memanggil function parameternya harus di isi sesuai dengan posisi parameter
+ ~ Dart mendukung named parameter, dimana saat memanggil functon kita bisa menyebutkan nama parameternya, sehinga kita tidak perlu mengisi parameter sesuai dengan posisi parameternya
+ ~ Secara dafault named parameter adalah optional dan bisa menjadi wajib dengan menambah "required"
+
+ ~ code named optional:
+
+void named({String? Nama1, String? Nama2}) {
+  print("Ini adalah $Nama1 dan $Nama2");
+}
+
+ ~ code named wajib :
+
+void named2({required String? Nama1, String? Nama2}) {
+  print("Ini adalah $Nama1 dan $Nama2");
+}
+
+....................................
+
+ - Function Return Value
+ 
+ ~ secara default, function tidak mengembalikan nilai (null), jika kita ingin, kita bisa membuat fungsi bisa mengembalikan nilai
+
+code : 
+
+var hasil = perkalian(5, 4);
+  print("5 * 4 adalah $hasil");
+}
+
+int perkalian(int a, int b) {
+  return a * b;
+}
+
+=====================================================
+
+
+
