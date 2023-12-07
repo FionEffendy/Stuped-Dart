@@ -1,7 +1,8 @@
 void main() {
-  nama();
+  var c = tambah(15, 5);
+  print(c);
 }
 
-void nama() {
-  print('Halo Dunia!');
+int tambah(int a, int b) {
+  return a + b;
 }
