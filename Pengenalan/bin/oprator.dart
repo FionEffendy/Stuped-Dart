@@ -19,4 +19,12 @@ void main() {
   print('oprator lebih dari sama dengan : ${a >= b}');
   print('oprator kurang dari sama dengan : ${a <= b}');
   print('');
+
+  bool c = false;
+  bool d = true;
+  print('Oprator Logika');
+  print('oprator dan : ${c & d}');
+  print('oprator atau : ${d | c}');
+  print('oprator kebalikan : ${!c}');
+  print('oprator kebalikan : ${!d}');
 }
