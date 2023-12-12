@@ -254,5 +254,14 @@ int perkalian(int a, int b) {
 
 =====================================================
 
+> Oprator
 
+ - Oprator Aritmatika (+,-,*,/,~/,%)
+ - Oprator Perbandingan (==, !=, >, <, >=, <=)
+ - Oprator Logika (&&, ||, )
+ - Oprator Logika[yang bisa di gunakan di dart] (&, |, !)
+
+untuk tanda seru di oprator logika itu adalah kebalikan contoh (!a)
+
+=====================================================
 
