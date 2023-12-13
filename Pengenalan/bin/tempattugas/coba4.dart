@@ -1,6 +1,6 @@
 void main() {
   int nilaiUTS = 75;
-  int nilaiUAS = 70;
+  int nilaiUAS = 75;
   int total = (nilaiUTS + nilaiUAS) ~/ 2;
 
   print('Nila UTS : $nilaiUTS');
