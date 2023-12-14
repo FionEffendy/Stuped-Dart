@@ -4,6 +4,8 @@ void main() {
     print(a);
   }
 
+  print('');
+
   // for in
   List<String> nama = [
     'Senin',

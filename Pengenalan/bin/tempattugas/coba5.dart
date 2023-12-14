@@ -1,5 +1,7 @@
 void main() {
-  for (int a = 1; a <= 20; a++) {
-    print(a);
-  }
+  int awal = 1;
+  int akhir = 20;
+  // int pilihan = 1;
+
+  for (int a = awal; a <= akhir; a++) {}
 }
