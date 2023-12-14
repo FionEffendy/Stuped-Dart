@@ -1,7 +1,11 @@
 void main() {
-  int awal = 1;
-  int akhir = 20;
-  // int pilihan = 1;
+  int angka = 2;
 
-  for (int a = awal; a <= akhir; a++) {}
+  if (angka == 1 || angka == 2) {
+    if (angka == 1) {
+      print('one');
+    } else {
+      print('two');
+    }
+  }
 }
