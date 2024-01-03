@@ -1,11 +1,9 @@
 void main() {
-  int angka = 2;
-
-  if (angka == 1 || angka == 2) {
-    if (angka == 1) {
-      print('one');
-    } else {
-      print('two');
+  for (var i = 0; i < 5; i++) {
+    if (i == 3) {
+      continue;
     }
+
+    print(i);
   }
 }
